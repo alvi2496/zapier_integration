@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  encoding: unicode
+  timeout: 5000
+  username: <%= ENV["DB_USERNAME"]  %>
+  password: <%= ENV["DB_PASSWORD"]  %>
+
+development:
+  <<: *default
+  database: zapier_integration_development
+
+test:
+  <<: *default
+  database: zapier_integration_test
+
+production:
+  <<: *default
+  database: postgresql
