@@ -8,4 +8,8 @@ module UserConcern
 
        self.api_key = random_key
     end
+
+    def registered_with?(topic)
+        webhooks.pluck(:topic).include? topic
+    end
 end
