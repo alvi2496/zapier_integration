@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-
   include UserConcern
+
+  has_many :messages
 
   before_create :assign_api_key
 

@@ -1,0 +1,9 @@
+<%= link_to "New message", new_message_path %>
+
+<ol>
+    <% @messages.each do |message| %>
+        <li>
+            <%= message.body %>
+        </li>
+    <% end %>
+</ol>
