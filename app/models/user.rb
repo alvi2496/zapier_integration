@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_many :messages
   has_many :webhooks
+  has_many :scheduled_webhooks
 
   before_create :assign_api_key
 
