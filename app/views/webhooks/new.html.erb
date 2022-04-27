@@ -1,0 +1,7 @@
+<%= form_with model: @webhook do |form| %>
+    <%= form.label "Topic" %>
+    <%= form.select :topic, [["Message created", "message_created"]] %>
+    <%= form.label "Address" %>
+    <%= form.text_field :address %>
+    <%= form.submit %>
+<% end %>

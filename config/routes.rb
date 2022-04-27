@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   resources :messages, only: [:index, :new, :create]
+  resources :webhooks, only: [:index, :new, :create]
 end

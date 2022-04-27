@@ -1,0 +1,21 @@
+<%= link_to "Register new webhook", new_webhook_path %>
+<table>
+    <thead>
+        <tr>
+            <td>Topic</td>
+            <td>Address</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @webhooks.each do |webhook| %>
+            <tr>
+                <td>
+                    <%= webhook.topic %>
+                </td>
+                <td>
+                    <%= webhook.address %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

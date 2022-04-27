@@ -2,6 +2,7 @@ class User < ApplicationRecord
   include UserConcern
 
   has_many :messages
+  has_many :webhooks
 
   before_create :assign_api_key
 
