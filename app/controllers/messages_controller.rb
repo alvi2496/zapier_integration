@@ -11,9 +11,9 @@ class MessagesController < ApplicationController
     def create
         message = current_user.messages.new(message_params)
         if message.save
-            flash[:message] = "Message created successfully"
+            flash[:notice] = "Message created successfully"
         else
-            flash[:error] = "Error creating message"
+            flash[:alert] = "Error creating message"
         end
         redirect_to messages_path
     end
