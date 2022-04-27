@@ -1,0 +1,3 @@
+module MessageConcern
+    
+end
