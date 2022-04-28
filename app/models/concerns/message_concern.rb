@@ -1,4 +1,5 @@
 module MessageConcern
+    extend ActiveSupport::Concern
 
     def new_message?
         created_at == updated_at
@@ -10,7 +11,7 @@ module MessageConcern
         return unless webhook.present?
         scheduled_webhooks = user.scheduled_webhooks.create(
             webhook_id: webhook.id,
-            object: self.class.to_s,
+            object_class: self.class.to_s,
             object_id: id
         )
     end

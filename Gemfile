@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # for authentication
 gem 'devise'
 
+# to post webhook data to external address
+gem "httparty"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

@@ -25,10 +25,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_27_231007) do
   create_table "scheduled_webhooks", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "webhook_id"
-    t.string "object"
+    t.string "object_class"
     t.integer "object_id"
     t.integer "status", default: 0
     t.integer "deliveries", default: 0
+    t.datetime "next_retry_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_scheduled_webhooks_on_user_id"
